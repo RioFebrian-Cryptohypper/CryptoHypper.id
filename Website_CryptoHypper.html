@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CryptoHypper.id</title>
+<!-- Menambahkan library ikon Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+
+/* Background Modern & Deep Space */
+body {
+background: #0d0208; /* Warna dasar ruang angkasa yang pekat */
+color: #fff;
+overflow-x: hidden;
+position: relative;
+min-height: 100vh;
+}
+
+/* Layer Aurora Glow Dinamis */
+.aurora-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -3;
+overflow: hidden;
+pointer-events: none;
+}
+.glow-1 {
+position: absolute;
+top: -20%;
+left: -10%;
+width: 800px;
+height: 800px;
+background: radial-gradient(circle, rgba(213, 69, 93, 0.25) 0%, transparent 70%);
+filter: blur(100px);
+animation: floatGlow1 15s ease-in-out infinite alternate;
+}
+.glow-2 {
+position: absolute;
+bottom: -20%;
+right: -10%;
+width: 700px;
+height: 700px;
+background: radial-gradient(circle, rgba(138, 33, 51, 0.3) 0%, transparent 70%);
+filter: blur(100px);
+animation: floatGlow2 12s ease-in-out infinite alternate;
+}
+
+/* Layer Titik-Titik Putih Kelap-Kelip (Stars Effect) */
+.stars {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -2;
+pointer-events: none;
+background-image: 
+radial-gradient(1.5px 1.5px at 20px 30px, #fff, rgba(0,0,0,0)),
+radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 50px 160px, #fff, rgba(0,0,0,0)),
+radial-gradient(1.5px 1.5px at 90px 40px, #ffffff80, rgba(0,0,0,0)),
+radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+radial-gradient(2px 2px at 160px 120px, #ffffffa0, rgba(0,0,0,0));
+background-size: 200px 200px;
+animation: twinkle 4s ease-in-out infinite alternate;
+opacity: 0.8;
+}
+
+/* Animasi-Animasi Background */
+@keyframes floatGlow1 {
+0% { transform: translate(0, 0) scale(1); }
+100% { transform: translate(100px, 80px) scale(1.2); }
+}
+@keyframes floatGlow2 {
+0% { transform: translate(0, 0) scale(1); }
+100% { transform: translate(-80px, -100px) scale(1.1); }
+}
+@keyframes twinkle {
+0% { opacity: 0.4; }
+100% { opacity: 0.95; }
+}
+
+/* Header & Navigasi */
+header {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 15px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(13, 2, 8, 0.6);
+border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(15px);
+z-index: 999;
+}
+.brand {
+display: flex;
+align-items: center;
+gap: 10px;
+text-decoration: none;
+color: #fff;
+font-weight: bold;
+letter-spacing: 0.5px;
+}
+
+/* Efek menyala putih halus untuk logo kecil di Header */
+.brand img {
+height: 40px;
+filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.85));
+}
+
+/* Hero Section */
+.hero {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+position: relative;
+}
+
+/* Efek menyala putih terang tebal untuk logo utama di Hero */
+.hero img {
+width: 170px;
+filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+margin-bottom: 10px;
+}
+
+h1 {
+font-size: 64px;
+margin: 20px 0;
+background: linear-gradient(135deg, #fff 40%, #ff758f 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+letter-spacing: -1px;
+}
+p {
+max-width: 750px;
+margin: auto;
+line-height: 1.8;
+color: #e0e0e0;
+}
+
+/* Sosial Media */
+.social-media {
+margin-top: 25px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+.social-media a {
+color: #fff;
+font-size: 28px;
+transition: transform 0.3s, color 0.3s;
+text-decoration: none;
+}
+.social-media a:hover {
+transform: translateY(-5px);
+}
+.social-media .instagram:hover {
+color: #fccc63;
+}
+.social-media .tiktok:hover {
+color: #00f2fe;
+}
+
+/* Tombol */
+.btn {
+display: inline-block;
+margin-top: 30px;
+padding: 14px 32px;
+background: linear-gradient(135deg, #ffffff 0%, #f1f1f1 100%);
+color: #8a2133;
+border-radius: 40px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+transition: 0.3s;
+}
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(213, 69, 93, 0.3);
+}
+
+/* Bagian Grid & Card */
+section {
+padding: 90px 8%;
+}
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+.card {
+background: rgba(255, 255, 255, 0.04);
+border: 1px solid rgba(255, 255, 255, 0.08);
+padding: 25px;
+border-radius: 18px;
+backdrop-filter: blur(12px);
+transition: all 0.3s ease;
+}
+.card:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.08);
+border-color: rgba(213, 69, 93, 0.4);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+text-align: center;
+padding: 35px;
+background: rgba(5, 1, 3, 0.8);
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+color: #a0a0a0;
+}
+</style>
+</head>
+<body>
+
+<!-- Layer Glow Dinamis & Bintang Kelap-kelip -->
+<div class="aurora-container">
+<div class="glow-1"></div>
+<div class="glow-2"></div>
+</div>
+<div class="stars"></div>
+
+<header>
+<a href="#" class="brand">
+<img src="https://i.imgur.com/00AVP3h.png" alt="Logo CryptoHypper">
+<span>CryptoHypper.id</span>
+</a>
+</header>
+
+<section class="hero">
+<div>
+<img src="https://i.imgur.com/00AVP3h.png" alt="Logo">
+<h1>CryptoHypper.id</h1>
+<p>Platform media digital yang menyajikan berita cryptocurrency, finansial, blockchain, Web3, teknologi, negara, dan perkembangan dunia.</p>
+
+<!-- Bagian Ikon Sosial Media Instagram & TikTok dengan Link Aktif -->
+<div class="social-media">
+<a href="https://www.instagram.com/cryptohypper?igsh=OWx3dG43YmQzaDVh" class="instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@cryptohypper.id?_r=1&_t=ZS-9837Vi5bQud" class="tiktok" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+
+<a class="btn" href="#">Mulai Membaca</a>
+</div>
+</section>
+
+<section>
+<h2>Kategori Berita</h2><br>
+<div class="grid">
+<div class="card">🪙 Crypto</div>
+<div class="card">💰 Finansial</div>
+<div class="card">🌐 Web3</div>
+<div class="card">⛓ Blockchain</div>
+<div class="card">💻 Teknologi</div>
+<div class="card">🌍 Dunia</div>
+</div>
+</section>
+
+<section>
+<h2>Tentang</h2><br>
+<p>CryptoHypper.id didirikan pada <b>16 Juli 2025</b> oleh <b>Rio Febrian</b>. Fokus pada berita crypto, finansial, blockchain, Web3, teknologi, dan ekonomi global.</p>
+</section>
+
+<footer>© 2025–2026 CryptoHypper.id | Founder: Rio Febrian</footer>
+</body>
+</html>
